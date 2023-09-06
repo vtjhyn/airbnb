@@ -94,23 +94,25 @@ const RegisterModal = () => {
       <hr />
       <Button 
         outline
+        small
         label='Continue with Google'
         icon={FcGoogle}
         onClick={() => signIn('google')}
       />
       <Button 
         outline
+        small
         label='Continue with Github'
         icon={AiFillGithub}
         onClick={() => signIn('github')}
       />
-      <div className='text-neutral-500 text-center mt-4 font-light'>
-        <div className='justify-center flex flex-row items-center gap-2'>
+      <div className='text-neutral-500 text-center font-light text-sm'>
+        <div className='justify-center flex flex-row items-center gap-1'>
           <div>
             Already have an account?
           </div>
           <div 
-            className='text-neutral-800 cursor-pointer hover:underline'
+            className='text-neutral-800 cursor-pointer hover:underline font-semibold'
             onClick={toggle}
           >
             Log in

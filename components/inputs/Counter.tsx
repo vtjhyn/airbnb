@@ -30,26 +30,26 @@ const Counter: React.FC<CounterProps> = ({
   return ( 
     <div className="flex flex-row items-center justify-between">
       <div className="flex flex-col">
-        <div className="font-medium">
+        <div className="text-sm font-semibold">
           {title}
         </div>
-        <div className="font-light text-gray-600">
+        <div className="text-sm">
           {subtitle}
         </div>
       </div>
       <div className="flex flex-row items-center gap-4">
         <div
           onClick={onReduce}
-          className="w-10 h-10 rounded-full border-[1px] border-neutral-400 flex items-center justify-center text-neutral-600 cursor-pointer hover:opacity-80 transiton"
+          className="w-8 h-8 rounded-full border-[1px] border-neutral-400 flex items-center justify-center text-neutral-600 cursor-pointer hover:opacity-80 transiton"
         >
           <AiOutlineMinus />
         </div>
-        <div className="font-light text-xl text-neutral-600">
+        <div className="font-light text-medium text-neutral-600">
           {value}
         </div>
         <div
           onClick={onAdd}
-          className="w-10 h-10 rounded-full border-[1px] border-neutral-400 flex items-center justify-center text-neutral-600 cursor-pointer hover:opacity-80 transiton"
+          className="w-8 h-8 rounded-full border-[1px] border-neutral-400 flex items-center justify-center text-neutral-600 cursor-pointer hover:opacity-80 transiton"
         >
           <AiOutlinePlus />
         </div>

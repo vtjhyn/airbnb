@@ -115,12 +115,12 @@ const RentModal = () => {
   }, [step]);
 
   let bodyContent = (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-4">
       <Heading 
         title="Which of these best describes your place?"
         subtitle="Pick a category"
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto">
+      <div className="grid grid-cols-3 gap-2 max-h-[50vh] overflow-y-scroll">
         {categories.map((item) => (
           <div key={item.label} className="col-span-1">
             <CategoryInput 
@@ -137,7 +137,7 @@ const RentModal = () => {
 
   if(step === STEPS.LOCATION) {
     bodyContent = (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         <Heading 
           title="Where is your place located?"
           subtitle="Help guest find you"
@@ -155,9 +155,9 @@ const RentModal = () => {
 
   if(step === STEPS.INFO) {
     bodyContent = (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         <Heading 
-          title="Share some basics about your place"
+          title="Share about your place"
           subtitle="What amenities do you have?"
         />
         <Counter
@@ -186,7 +186,7 @@ const RentModal = () => {
 
   if(step === STEPS.IMAGES) {
     bodyContent = (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         <Heading
           title="Add a photo of your place"
           subtitle="Show guests what your place look like"
@@ -201,9 +201,9 @@ const RentModal = () => {
 
   if(step === STEPS.DESCRIPTION) {
     bodyContent = (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         <Heading
-          title="How would you describe your place?"
+          title="Describe your place"
           subtitle="Short and sweet works best"
         />
         <Input
@@ -229,7 +229,7 @@ const RentModal = () => {
 
   if(step === STEPS.PRICE) {
     bodyContent = (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         <Heading
           title="Now, set your price"
           subtitle="How much do you charge per night"

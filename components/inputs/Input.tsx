@@ -27,30 +27,30 @@ const Input: React.FC<InputProps> = ({
   return ( 
     <div className="w-full relative">
       {formatPrice && (
-        <BiDollar 
-          size={24}
-          className='text-neutral-700 absolute top-5 left-2'
+        <BiDollar
+          size={16}
+          className='text-neutral-700 absolute top-3 left-2'
         />
       )}
-      <input 
+      <input
         id={id}
         disabled={disabled}
-        {...register(id, {required})}
+        {...register(id, { required })}
         placeholder=" "
         type={type}
-        className={`peer w-full p-4 pt-6 font-light bg-white border-2 rounded-md outline-none transition disabled:opacity-70 disabled:curosr-not-allowed
-        ${formatPrice ? 'pl-9' : 'pl-4'}
+        className={`peer w-full p-2 font-light bg-white border rounded-md outline-none transition disabled:opacity-70 disabled:cursor-not-allowed
+        ${formatPrice ? 'pl-6' : 'pl-2'}
         ${errors[id] ? 'border-rose-500' : 'border-neutral-300'}
         ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'}
         `}
       />
       <label
-        className={`absolute text-md duration-150 transform -translate-y-3 top-5 z-10 origin-[0]
-        ${formatPrice ? 'left-9' : 'left-4'}
+        className={`absolute text-sm duration-150 transform -translate-y-2 top-2 z-10 origin-[0]
+        ${formatPrice ? 'left-6' : 'left-2'}
         peer-placeholder-shown:scale-100
         peer-placeholder-shown:translate-y-0
         peer-focus:scale-75
-        peer-focus:-translate-y-4
+        peer-focus:-translate-y-3
         ${errors[id] ? 'text-rose-500' : 'text-zinc-400'}
         `}
       >
